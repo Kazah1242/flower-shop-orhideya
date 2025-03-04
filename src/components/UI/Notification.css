@@ -1,0 +1,109 @@
+/* src/components/UI/Notification.css */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-md);
+  color: white;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+  animation: slideIn 0.3s ease-out;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.notification-icon {
+  font-size: var(--font-size-xl);
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex-grow: 1;
+}
+
+.notification-message {
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: var(--font-size-lg);
+  padding: 0;
+  transition: color var(--transition-fast);
+  line-height: 1;
+  margin-left: var(--spacing-sm);
+}
+
+.notification-close:hover {
+  color: white;
+}
+
+.notification.success {
+  background-color: var(--success-color);
+  border-left: 4px solid #388E3C;
+}
+
+.notification.error {
+  background-color: var(--error-color);
+  border-left: 4px solid #D32F2F;
+}
+
+.notification.warning {
+  background-color: var(--warning-color);
+  border-left: 4px solid #F57C00;
+}
+
+.notification.info {
+  background-color: var(--info-color);
+  border-left: 4px solid #1976D2;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.notification.exit {
+  animation: slideOut 0.3s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+  .notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    max-width: none;
+    min-width: 0;
+    width: auto;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .notification-icon {
+    font-size: var(--font-size-lg);
+  }
+}

@@ -1,0 +1,216 @@
+.market-page {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-large);
+  }
+  
+  .filters-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-medium);
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    padding: var(--spacing-small);
+    border: 2px solid var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-normal);
+  }
+  
+  .category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-small);
+  }
+  
+  .flower-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-large);
+  }
+  
+  .cart-section {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .cart-link {
+    text-decoration: none;
+  }
+  
+  .cart-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: var(--spacing-small);
+  }
+  
+  .cart-preview {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-medium);
+    flex-wrap: wrap;
+  }
+  
+  .cart-item-preview {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+    background-color: var(--white);
+    padding: var(--spacing-small);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .remove-cart-item {
+    font-size: var(--font-size-small);
+    padding: 4px 8px;
+  }
+  
+  .price-filter {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+  }
+  
+  .price-filter input {
+    width: 100px;
+    padding: var(--spacing-small);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+  }
+  
+  .no-results {
+    text-align: center;
+    padding: var(--spacing-large);
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+  }
+  
+  @media (max-width: 768px) {
+    .filters-section {
+      align-items: stretch;
+    }
+  
+    .category-filters {
+      justify-content: center;
+    }
+  
+    .price-filter {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+  .sort-section {
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  .sort-select {
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid var(--secondary-color);
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-normal);
+  }
+
+  .store-title-container {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  
+  .store-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .title-flower {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    letter-spacing: 3px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .title-flower:hover {
+    transform: scale(1.05);
+    color: var(--accent-color);
+  }
+  
+  .title-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 300;
+    margin-top: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  /* Анимация */
+  @keyframes titleAnimation {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .store-title {
+    animation: titleAnimation 1s ease-out;
+  }
+  
+  /* Декоративные элементы */
+  .store-title-container::before,
+  .store-title-container::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: var(--primary-color);
+    top: 50%;
+    opacity: 0.5;
+  }
+  
+  .store-title-container::before {
+    left: 0;
+    transform: translateX(-120%);
+  }
+  
+  .store-title-container::after {
+    right: 0;
+    transform: translateX(120%);
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .title-flower {
+      font-size: 2.5rem;
+    }
+    
+    .title-subtitle {
+      font-size: 1rem;
+    }
+    .store-title-container::before,
+    .store-title-container::after {
+      display: none; /* Скрываем декоративные линии на мобильных устройствах */
+      }
+  }
+
+
+.store-info-section {
+  margin-top: var(--spacing-large);
+  padding: var(--spacing-large) 0;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--background-color-light);
+}
+
+@media (max-width: 768px) {
+  .store-info-section {
+    margin-top: var(--spacing-medium);
+    padding: var(--spacing-medium) var(--spacing-small);
+  }
+}

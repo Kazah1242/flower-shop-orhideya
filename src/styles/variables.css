@@ -1,0 +1,78 @@
+:root {
+  /* Основная цветовая палитра */
+  --primary-color: #3E885B;      /* Глубокий зеленый */
+  --primary-light: #5BA97A;      /* Светло-зеленый */
+  --primary-dark: #2D6644;       /* Темно-зеленый */
+  --secondary-color: #F8B400;    /* Теплый желтый */
+  --accent-color: #E85A4F;       /* Коралловый */
+  --accent-light: #FF8A80;       /* Светло-коралловый */
+  
+  /* Нейтральные цвета */
+  --background-color: #FAFAFA;   /* Почти белый фон */
+  --surface-color: #FFFFFF;      /* Белый для карточек */
+  --text-color: #333333;         /* Основной текст */
+  --text-color-light: #666666;   /* Вторичный текст */
+  --text-color-muted: #999999;   /* Приглушенный текст */
+  --border-color: #E0E0E0;       /* Цвет границ */
+  
+  /* Функциональные цвета */
+  --success-color: #4CAF50;      /* Зеленый для успеха */
+  --error-color: #F44336;        /* Красный для ошибок */
+  --warning-color: #FF9800;      /* Оранжевый для предупреждений */
+  --info-color: #2196F3;         /* Синий для информации */
+  
+  /* Отступы */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* Для обратной совместимости */
+  --spacing-small: var(--spacing-sm);
+  --spacing-medium: var(--spacing-md);
+  --spacing-large: var(--spacing-lg);
+  
+  /* Тени */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.12);
+  
+  /* Скругления */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+  
+  /* Для обратной совместимости */
+  --border-radius: var(--border-radius-md);
+  --box-shadow: var(--shadow-md);
+  
+  /* Типографика */
+  --font-family: 'Montserrat', sans-serif;
+  --font-size-xs: 0.75rem;    /* 12px */
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-md: 1rem;       /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.25rem;    /* 20px */
+  --font-size-2xl: 1.5rem;    /* 24px */
+  --font-size-3xl: 1.875rem;  /* 30px */
+  --font-size-4xl: 2.25rem;   /* 36px */
+  
+  /* Для обратной совместимости */
+  --font-size-small: var(--font-size-sm);
+  --font-size-normal: var(--font-size-md);
+  --font-size-large: var(--font-size-xl);
+  
+  /* Переходы */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Сетка */
+  --container-width: 1200px;
+  --container-padding: var(--spacing-lg);
+}
